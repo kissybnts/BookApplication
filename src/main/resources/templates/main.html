@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>一覧ページ</title>
+    <style>
+        dl{
+            display: inline-block;
+            width: 300px;
+            float: left;
+            margin: 5px;
+            border: 1px solid gray;
+        }
+        dd{
+            max-height: 50px;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>一覧ページ</h1>
+    <dl th:each="book : ${books}" th:object="${book}">
+        <dt>Title</dt>
+        <dd th:text="*{title}">本の名前</dd>
+        <dt>SubTitle</dt>
+        <dd th:if="*{subTitle != null}" th:text="*{subTitle}">サブタイトル</dd>
+        <dt>LeadingSentence</dt>
+        <dd th:text="*{leadingSentence}">リード文</dd>
+        <dt>ImagePath</dt>
+        <dd th:text="*{imagePath}">本当は画像を表示するぞ</dd>
+        <dt>Author</dt>
+        <dd th:each="author : *{authors}" th:text="${author.name}">著者の名前</dd>
+        <dt>Category</dt>
+        <dd th:each="category : *{categories}" th:text="${category.name}">カテゴリ名</dd>
+        <dt>Publisher</dt>
+        <dd th:text="*{publisher.name}">出版社名</dd>
+        <dt>URL</dt>
+        <dd><a href="#" th:href="*{url}" th:text="*{url}">どっかのURL</a></dd>
+    </dl>
+</body>
+</html>

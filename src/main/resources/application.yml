@@ -1,0 +1,15 @@
+spring:
+# DataSource
+  datasource:
+    url: jdbc:mysql://localhost/book_application
+    username: user
+    password: user
+    driver-class-name: com.mysql.jdbc.Driver
+# JPA
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+# Thymeleaf
+  thymeleaf:
+    cache: false
