@@ -22,11 +22,11 @@ open class BookServiceTest{
     fun findAllBookTest() {
         var sutList = bookService.findAllBook()
         var sut = sutList[0]
-        assertThat(sutList.size, be(1))
+        assertThat(sutList.size, be(10))
         assertThat(sut.id, be(1L))
         assertThat(sut.title, be("title"))
         assertThat(sut.subTitle, be("subTitle"))
-        assertThat(sut.leadingSentence, be("leading"))
+        assertThat(sut.leadingSentence, be("leadingSentence"))
         assertThat(sut.imagePath, be("imagePath"))
         assertThat(sut.url, be("url"))
         assertThat(sut.authors[0].name, be("author"))
