@@ -13,3 +13,4 @@ spring:
 # Thymeleaf
   thymeleaf:
     cache: false
+    mode: HTML5
