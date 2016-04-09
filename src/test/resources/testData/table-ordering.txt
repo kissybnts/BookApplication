@@ -1,0 +1,7 @@
+book
+author
+category
+publisher
+author_book
+category_book
+publisher_book

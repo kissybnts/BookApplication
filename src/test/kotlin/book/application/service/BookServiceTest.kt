@@ -1,7 +1,10 @@
 package book.application.service
 
 import book.application.BookApplication
+import book.application.test.TestDataResorces
 import org.junit.Assert.*
+import org.junit.BeforeClass
+import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.springframework.beans.factory.annotation.Autowired
@@ -15,7 +18,12 @@ import org.hamcrest.CoreMatchers.`is` as be
 @SpringApplicationConfiguration(BookApplication::class)
 @WebAppConfiguration
 open class BookServiceTest{
-    @Autowired lateinit var bookService: BookService
+    @Rule
+    @Autowired
+    lateinit var testDataResources: TestDataResorces
+
+    @Autowired
+    lateinit var bookService: BookService
 
     @Test
     @Transactional
@@ -34,4 +42,5 @@ open class BookServiceTest{
         assertThat(sut.categories[0].name, be("category"))
         assertThat(sut.publisher.name, be("publisher"))
     }
+
 }
