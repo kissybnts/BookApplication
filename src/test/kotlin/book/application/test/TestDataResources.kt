@@ -13,7 +13,7 @@ import javax.sql.DataSource
  * .
  */
 @Component
-class TestDataResorces : ExternalResource() {
+class TestDataResources : ExternalResource() {
     @Autowired
     lateinit private var dataSource: DataSource
 

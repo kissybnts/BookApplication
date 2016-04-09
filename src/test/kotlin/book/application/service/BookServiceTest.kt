@@ -1,7 +1,7 @@
 package book.application.service
 
 import book.application.BookApplication
-import book.application.test.TestDataResorces
+import book.application.test.TestDataResources
 import org.junit.Assert.*
 import org.junit.BeforeClass
 import org.junit.Rule
@@ -20,7 +20,7 @@ import org.hamcrest.CoreMatchers.`is` as be
 open class BookServiceTest{
     @Rule
     @Autowired
-    lateinit var testDataResources: TestDataResorces
+    lateinit var testDataResources: TestDataResources
 
     @Autowired
     lateinit var bookService: BookService
