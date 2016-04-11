@@ -9,10 +9,25 @@
     <h2>Login</h2>
     <ul>
         <li>
-            Login ID :<input type="text" name="loginId" placeholder="mail address"/>
+            Login ID :<input type="text" name="loginId" placeholder="login id"/>
         </li>
         <li>
             Password : <input type="password" name="password" placeholder="password"/>
+        </li>
+    </ul>
+    <button type="submit">Login</button>
+</form>
+<form action="#" th:action="@{/signUp}" method="post" role="form" autocomplete="off">
+    <h2>Sign Up</h2>
+    <ul>
+        <li>
+            Your ID : <input type="text" name="loginId" placeholder="login id"/>
+        </li>
+        <li>
+            Password : <input type="password" name="password" placeholder="password"/>
+        </li>
+        <li>
+            Again Password : <input type="password" name="againPassword" placeholder="password again"/>
         </li>
     </ul>
     <button type="submit">Login</button>

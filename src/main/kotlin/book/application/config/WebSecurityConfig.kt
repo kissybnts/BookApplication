@@ -27,7 +27,7 @@ open class WebSecurityConfig() : WebSecurityConfigurerAdapter() {
         http.authorizeRequests().antMatchers("/css/**").permitAll()
                                 .antMatchers("/js/**").permitAll()
                                 .antMatchers("/image/**").permitAll()
-                                .antMatchers("/entry").permitAll()
+                                .antMatchers("/signUp").permitAll()
                                 .anyRequest().authenticated()
 
         http.formLogin().loginPage("/login")
