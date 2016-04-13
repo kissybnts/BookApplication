@@ -6,7 +6,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority
 import org.springframework.security.core.userdetails.UserDetails
 
 /**
- * .
+ * Spring Securityの認証ユーザクラス.
  */
 class AuthorityUserDetails(private val id: Long?,
                            private val loginId: String,

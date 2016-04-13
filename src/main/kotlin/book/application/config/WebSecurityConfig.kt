@@ -1,6 +1,6 @@
 package book.application.config
 
-import book.application.service.AuthorityUserDetalisService
+import book.application.service.AuthorityUserDetailsService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.context.annotation.Configuration
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder
@@ -19,7 +19,7 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher
 @EnableGlobalMethodSecurity(prePostEnabled = true, securedEnabled = true)
 open class WebSecurityConfig() : WebSecurityConfigurerAdapter() {
     @Autowired
-    lateinit private var userDetailsService: AuthorityUserDetalisService
+    lateinit private var userDetailsService: AuthorityUserDetailsService
 
     override fun configure(http: HttpSecurity?) {
         http?: return

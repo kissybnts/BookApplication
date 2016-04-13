@@ -8,7 +8,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException
 import org.springframework.stereotype.Service
 
 /**
- * .
+ * Spring Securityの認証用サービスクラス.
  */
 @Service
 class AuthorityUserDetailsService() : UserDetailsService {
