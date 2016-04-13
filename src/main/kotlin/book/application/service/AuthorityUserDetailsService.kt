@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service
  * .
  */
 @Service
-class AuthorityUserDetalisService() : UserDetailsService {
+class AuthorityUserDetailsService() : UserDetailsService {
     @Autowired
     lateinit private var repository: AuthorityUserRepository
 
