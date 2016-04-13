@@ -1,0 +1,11 @@
+<header id="header">
+    <h1>BookApplication</h1>
+</header>
+
+<section id="page-nation">
+    <ul>
+        <li><a href="#" th:if="${not page.isFirst()}" th:href="@{/main(page=${page.number - 1})}">prev</a></li>
+        <li th:text="${page.number + 1} + '/' + ${page.totalPages}">current page</li>
+        <li><a href="#" th:if="${not page.isLast()}" th:href="@{/main(page=${page.number + 1})}">next</a></li>
+    </ul>
+</section>
